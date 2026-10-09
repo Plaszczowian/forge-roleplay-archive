@@ -212,29 +212,25 @@
   .brand .brand-logo{width:105px;height:44px}
 }
 
-/* Ana sayfa HERO: gerçek Forge logosu */
+/* HERO FORGE — sadece yazı, mevcut koyu banner aynen korunur */
 .hero h1.hero-logo{
-  width:min(520px,70vw);
+  width:auto;
   height:auto;
-  margin:18px 0 22px;
-  line-height:0;
-  letter-spacing:0;
-  font-size:0;
-  text-shadow:none;
-}
-.hero h1.hero-logo img{
-  display:block;
-  width:100%;
-  height:auto;
-  max-height:245px;
-  object-fit:contain;
-  object-position:left center;
-  filter:drop-shadow(0 10px 28px #000);
+  max-width:none;
+  margin:18px 0;
+  font-family:Arial Black, Arial, sans-serif;
+  font-size:120px;
+  line-height:.8;
+  font-weight:900;
+  font-style:italic;
+  letter-spacing:5px;
+  color:#f0f2f3;
+  text-shadow:0 8px 35px #000, 0 0 2px #fff;
+  filter:none;
 }
 @media(max-width:900px){
-  .hero h1.hero-logo{width:min(440px,78vw)}
+  .hero h1.hero-logo{font-size:80px}
 }
 @media(max-width:600px){
-  .hero h1.hero-logo{width:min(360px,88vw)}
-  .hero h1.hero-logo img{max-height:190px}
+  .hero h1.hero-logo{font-size:65px}
 }
