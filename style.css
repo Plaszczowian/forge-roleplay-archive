@@ -73,3 +73,59 @@
     min-height:0;
   }
 }
+
+/* FINAL IMAGE FIX: kart yüksekliği fotoğrafın gerçek oranından gelsin */
+.archive-card .cover,
+.cards .pic,
+.gallery-item,
+.event-cover,
+.detail-cover,
+.portrait {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  display: block !important;
+  padding: 0 !important;
+  background: #111820 !important;
+}
+
+.archive-card .cover img,
+.cards .pic img,
+.gallery-item img,
+.event-cover img,
+.detail-cover img,
+.portrait img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: initial !important;
+  object-position: center !important;
+}
+
+/* Önceki blur/dolgu katmanları doğal fotoğraf yüksekliğini etkilemesin. */
+.archive-card .cover::before,
+.archive-card .cover::after,
+.cards .pic::before,
+.cards .pic::after,
+.gallery-item::before,
+.gallery-item::after,
+.event-cover::before,
+.event-cover::after,
+.detail-cover::before,
+.detail-cover::after,
+.portrait::before,
+.portrait::after {
+  display: none !important;
+}
+
+@media(max-width:900px){
+  .archive-card .cover,
+  .cards .pic,
+  .gallery-item,
+  .event-cover,
+  .detail-cover,
+  .portrait { height:auto !important; min-height:0 !important; }
+}
