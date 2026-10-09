@@ -129,3 +129,76 @@
   .detail-cover,
   .portrait { height:auto !important; min-height:0 !important; }
 }
+
+/* YATAY KARAKTER FOTOĞRAFLARI: daha büyük alan, tam görüntü, kırpma yok */
+.archive-card .cover.landscape,
+.cards .pic.landscape,
+.gallery-item.landscape,
+.event-cover.landscape,
+.detail-cover.landscape,
+.portrait.landscape {
+  height:220px !important;
+  min-height:220px !important;
+  position:relative !important;
+  overflow:hidden !important;
+  background:#111820 !important;
+}
+.archive-card .cover.landscape::before,
+.cards .pic.landscape::before,
+.gallery-item.landscape::before,
+.event-cover.landscape::before,
+.detail-cover.landscape::before,
+.portrait.landscape::before {
+  display:block !important;
+  content:"" !important;
+  position:absolute !important;
+  inset:-25px !important;
+  z-index:0 !important;
+  background-image:var(--fill) !important;
+  background-position:center !important;
+  background-size:cover !important;
+  background-repeat:no-repeat !important;
+  filter:blur(18px) brightness(.42) !important;
+  transform:scale(1.08) !important;
+}
+.archive-card .cover.landscape::after,
+.cards .pic.landscape::after,
+.gallery-item.landscape::after,
+.event-cover.landscape::after,
+.detail-cover.landscape::after,
+.portrait.landscape::after {
+  display:block !important;
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:0 !important;
+  background:rgba(5,8,11,.10) !important;
+}
+.archive-card .cover.landscape img,
+.cards .pic.landscape img,
+.gallery-item.landscape img,
+.event-cover.landscape img,
+.detail-cover.landscape img,
+.portrait.landscape img {
+  position:relative !important;
+  z-index:1 !important;
+  width:100% !important;
+  height:220px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  background:transparent !important;
+}
+@media(max-width:600px){
+  .archive-card .cover.landscape,
+  .cards .pic.landscape,
+  .gallery-item.landscape,
+  .event-cover.landscape,
+  .detail-cover.landscape,
+  .portrait.landscape {height:210px !important;min-height:210px !important}
+  .archive-card .cover.landscape img,
+  .cards .pic.landscape img,
+  .gallery-item.landscape img,
+  .event-cover.landscape img,
+  .detail-cover.landscape img,
+  .portrait.landscape img {height:210px !important}
+}
